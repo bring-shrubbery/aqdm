@@ -2,7 +2,10 @@
 
 Simple terminal progress indicator __that works__
 
-<!-- ![Animation](https://raw.githubusercontent.com/Yuhsak/nqdm/images/nqdm.gif) -->
+- ✅ Simple API to show progress of a loop
+- 🫡 Both CommonJS and ESM imports are supported
+- 🔥 Examples of usage provided below
+- 🥳 Written in TypeScript
 
 ## Installation
 
