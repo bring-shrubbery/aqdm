@@ -1,12 +1,13 @@
-# nqdm
-Simple terminal progress indicator made for any loop
+# aqdm
 
-![Animation](https://raw.githubusercontent.com/Yuhsak/nqdm/images/nqdm.gif)
+Simple terminal progress indicator __that works__
+
+<!-- ![Animation](https://raw.githubusercontent.com/Yuhsak/nqdm/images/nqdm.gif) -->
 
 ## Installation
 
 ```sh
-npm install nqdm
+npm install aqdm
 ```
 
 ## Usage
@@ -61,13 +62,13 @@ Results:
 
 ## Options
 
-### length
+### `length`
 
-You can manually specify total length of items when you works with iterable objects without 'length' property. (Typically for generators.)
+You can manually specify total length of items when you works with iterable objects without `length` property. (Typically for generators.)
 
 ```js
 function* gen(num) {
-	for(let i=0;i<num;i++){
+	for (let i = 0; i < num; i++) {
 		yield i
 	}
 }
@@ -79,7 +80,7 @@ for(const v of nqdm(g, {length: 100})){
 }
 ```
 
-### dest
+### `dest`
 
 Choose where to write progress indicator ('stdout' or 'stderr'), another value will be ignored.  
 Defaults to be 'stdout'.
@@ -90,7 +91,7 @@ for(const v of nqdm(arr, {dest: 'stderr'})) {
 }
 ```
 
-### callback
+### `callback`
 
 You can define your own callback function being called per iteration.
 
@@ -105,7 +106,7 @@ for(const v of nqdm(arr, {callback: cb})) {
 
 ```
 
-### silent
+### `silent`
 
 nqdm will display nothing when set this option to true. (designed to use with callback function.)
 
