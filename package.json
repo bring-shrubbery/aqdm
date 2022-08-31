@@ -1,6 +1,6 @@
 {
-  "name": "nqdm",
-  "version": "2.0.2",
+  "name": "aqdm",
+  "version": "1.0.0",
   "description": "Simple terminal progress indicator made for any loop",
   "keywords": [
     "tqdm",
@@ -14,7 +14,9 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "module": "dist/index.mjs",
-  "files": ["dist/"],
+  "files": [
+    "dist/"
+  ],
   "engines": {
     "node": ">=14"
   },
@@ -22,11 +24,15 @@
     "build": "tsup src/main.ts --format esm,cjs --dts --minify",
     "prepublishOnly": "npm run build"
   },
-  "author": "Yuhsak Inoue",
+  "author": {
+    "name": "Antoni Silvestrovič",
+    "email": "antoni.silvestrovic@gmail.com",
+    "url": "https://antoni.ai/"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Yuhsak/nqdm.git"
+    "url": "https://github.com/bring-shrubbery/aqdm.git"
   },
   "devDependencies": {
     "@types/node": "^16",

@@ -254,6 +254,7 @@ export function nqdm(
 export function nqdm<
   T extends undefined | IterFunc | Array<any> | Generator<any> = undefined
 >(entity: T, options?: NqdmOptions): HandlerType<T>;
+
 export function nqdm<
   T extends
     | undefined
@@ -269,7 +270,7 @@ export function nqdm<
   } else if (isFunction(entity)) {
     return <HandlerType<T>>nqdmForIterFunction(entity, options);
   } else {
-    return <HandlerType<T>>nqdmForUndefined(entity as NqdmOptions);
+    return <HandlerType<T>>nqdmForUndefined(entity as unknown as NqdmOptions);
   }
 }
 
