@@ -22,7 +22,7 @@
   },
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts --minify",
-    "clean": "npx rimraf node_modules && npx rimraf dist",
+    "clean": "rimraf node_modules && rimraf dist",
     "prepublishOnly": "npm run clean && npm run build"
   },
   "author": {
