@@ -1,6 +1,6 @@
 {
   "name": "aqdm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple terminal progress indicator made for any loop",
   "keywords": [
     "tqdm",
@@ -21,8 +21,9 @@
     "node": ">=14"
   },
   "scripts": {
-    "build": "tsup src/main.ts --format esm,cjs --dts --minify",
-    "prepublishOnly": "npm run build"
+    "build": "tsup src/index.ts --format esm,cjs --dts --minify",
+    "clean": "npx rimraf node_modules && npx rimraf dist",
+    "prepublishOnly": "npm run clean && npm run build"
   },
   "author": {
     "name": "Antoni Silvestrovič",
@@ -35,9 +36,10 @@
     "url": "https://github.com/bring-shrubbery/aqdm.git"
   },
   "devDependencies": {
-    "@types/node": "^16",
     "@swc/core": "^1.2.194",
     "@swc/jest": "^0.2.21",
+    "@types/node": "^16",
+    "rimraf": "^3.0.2",
     "tsup": "^6.0.1",
     "typescript": "^4.7.2"
   }
