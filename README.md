@@ -18,12 +18,12 @@ npm install aqdm
 ### With iterable objects
 
 ```js
-const nqdm = require('nqdm')
+import aqdm from 'aqdm'
 
 // Array, Generator, etc..
 const arr = [...Array(1000)]
 
-for(const v of nqdm(arr)) {
+for(const v of aqdm(arr)) {
 	// do something
 }
 ```
@@ -37,7 +37,7 @@ Results:
 ### Specify times of iteration instead of iterables
 
 ```js
-for(const i of nqdm(300)) {
+for(const i of aqdm(300)) {
 	// do something
 }
 ```
@@ -51,7 +51,7 @@ Results:
 ### Manualy process
 
 ```js
-const prgrs = nqdm()
+const prgrs = aqdm()
 while(true) {
 	prgrs.process()
 }
@@ -78,7 +78,7 @@ function* gen(num) {
 
 const g = gen(100)
 
-for(const v of nqdm(g, {length: 100})){
+for(const v of aqdm(g, {length: 100})){
 	// do something
 }
 ```
@@ -89,8 +89,8 @@ Choose where to write progress indicator ('stdout' or 'stderr'), another value w
 Defaults to be 'stdout'.
 
 ```js
-for(const v of nqdm(arr, {dest: 'stderr'})) {
-	// now nqdm will write the progress into process.stderr
+for(const v of aqdm(arr, {dest: 'stderr'})) {
+	// now aqdm will write the progress into process.stderr
 }
 ```
 
@@ -103,7 +103,7 @@ const cb = ({current, total, ratio, elapsed, remain, perSec}) => {
 	console.log({current, total, ratio, elapsed, remain, perSec})
 }
 
-for(const v of nqdm(arr, {callback: cb})) {
+for(const v of aqdm(arr, {callback: cb})) {
 	// do something
 }
 
@@ -111,10 +111,10 @@ for(const v of nqdm(arr, {callback: cb})) {
 
 ### `silent`
 
-nqdm will display nothing when set this option to true. (designed to use with callback function.)
+`aqdm` will display nothing when set this option to true. (designed to use with callback function.)
 
 ```js
-for(const v of nqdm(arr, {silent: true})) {
-	// now nqdm displays nothing.
+for(const v of aqdm(arr, {silent: true})) {
+	// now aqdm displays nothing.
 }
 ```
